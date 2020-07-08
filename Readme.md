@@ -4,8 +4,8 @@ This project contains two scripts for updating bind9 on a local server.
 The scripts get the servers public ip address and then update the specified zones with the current public ip address.
 
 Both can do the job of updating bind9 zone files. Only one is needed.  
-The recommended way is using [bind9_dns_named.sh](bind9_dns_named.sh).
-[Bind9_dns.sh](bind9_dns.sh) is included as an inferior way of accomplishing the same task if [bind9_dns_named.sh](bind9_dns_named.sh) does not work for your setup.
+The recommended way is using [bind9_dns_named.sh](Readme.bind9_dns_named.md).
+[Bind9_dns.sh](Readme.bind9_dns.md) is included as an inferior way of accomplishing the same task if [bind9_dns_named.sh](Readme.bind9_dns_named.md) does not work for your setup.
 
 Both scripts preform a backup before making changes to original files.
 
@@ -13,11 +13,11 @@ Both scripts preform a backup before making changes to original files.
 
 ### bind9_dns_named.sh
 
-The [bind9_dns_named.sh](bind9_dns_named.sh) script uses domain names to find and update the zone records with current public ip address. This script has extra testing of the zone and conf before making and enabling changes.
+The [bind9_dns_named.sh](Readme.bind9_dns_named.md) script uses domain names to find and update the zone records with current public ip address. This script has extra testing of the zone and conf before making and enabling changes.
 
 ### bind9_dns.sh
 
-The [bind9_dns.sh](bind9_dns.sh) is simpler and thus not a much robust testing built in. Include just in case your server configuration does not support [bind9_dns_named.sh](bind9_dns_named.sh) script.
+The [bind9_dns.sh](Readme.bind9_dns.md) is simpler and thus not a much robust testing built in. Include just in case your server configuration does not support [bind9_dns_named.sh](Readme.bind9_dns_named.md) script.
 
 ## Automation
 
