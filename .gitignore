@@ -1,0 +1,29 @@
+# Ignore everything
+# https://stackoverflow.com/questions/987142/make-gitignore-ignore-everything-except-a-few-files
+/*
+
+# But not these files...
+!.gitignore
+!.gitconfig
+!bind9_dns.sh
+!bind9_dns_named.sh
+!sample.cfg
+!Readme.bind9_dns.md
+!Readme.bind9_dns_named.md
+!Readme.md
+!LICENSE
+# Ignore all files ending with .log
+**.log
+
+# Whitelist folders
+# trailing "/" is optional for folders, may match file though.
+# "/" is NOT optional when followed by a *
+# !public_html/
+# !public_html/*
+
+# black list folders
+# public_html/.well-known/
+
+# black list files
+# **/error_log
+# ppublic_html/**/.gitignore
