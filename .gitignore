@@ -7,6 +7,7 @@
 !.gitconfig
 !bind9_dns.sh
 !bind9_dns_named.sh
+!bind9_fn.sh
 !sample.cfg
 !Readme.bind9_dns.md
 !Readme.bind9_dns_named.md
