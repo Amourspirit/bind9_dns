@@ -29,13 +29,13 @@
 # Script to update one or more ip address with the free service duckdns.org
 # Created by Paul Moss
 # Created: 2020-06-26
-# Updated: 2020-07-07
+# Updated: 2020-07-19
 # File Name: bind9_dns.sh
-# Version 0.5.1
+# Version 0.5.2
 # URL: https://github.com/Amourspirit/bind9_dns
 #endregion
 
-VER='0.5.1'
+VER='0.5.2'
 CONFIG_FILE="$HOME/.bind9/config.cfg"
 TMP_IP_FILE='/tmp/current_ip_address'
 IP_URL='https://checkip.amazonaws.com/'
@@ -46,7 +46,12 @@ IP=''
 RESTOR=0
 BACKUP_DIR='/tmp/bind9_dns'
 
-source bind9_fn.sh
+source "$(dirname $0)/bind9_fn.sh"
+if [[ $? -ne 0 ]]; then
+    echo 'Unable to find source file: bind9_fn.sh'
+    echo 'Terminating due to error'
+    exit 1
+fi
 
 if ! [[ -r "${CONFIG_FILE}" ]]; then
     echo "File does not exist or no read permissions for bind9 config file: ${CONFIG_FILE}"
